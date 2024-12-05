@@ -1,0 +1,24 @@
+model:
+    params:
+        image_size: 224
+        patch_size: 8
+        encoder:
+            dim: 512
+            depth: 8
+            heads: 8
+            mlp_dim: 2048
+        decoder:
+            dim: 512
+            depth: 8
+            heads: 8
+            mlp_dim: 2048
+        quantizer:
+            embed_dim: 32
+            n_embed: 8192
+        loss:
+            params:
+                disc_conditional: false
+                disc_in_channels: 3
+                disc_start: 0
+                disc_weight: 0.8
+                codebook_weight: 1.0

@@ -1,0 +1,23 @@
+model:
+    params:
+        image_size: 256
+        patch_size: 8
+        encoder:
+            dim: 768
+            depth: 12
+            heads: 12
+            mlp_dim: 3072
+        decoder:
+            dim: 768
+            depth: 12
+            heads: 12
+            mlp_dim: 3072
+        quantizer:
+            embed_dim: 768
+            n_embed: 8192
+        loss:
+            params:
+                loglaplace_weight: 0.0
+                loggaussian_weight: 1.0
+                perceptual_weight: 0.1
+                adversarial_weight: 0.1
